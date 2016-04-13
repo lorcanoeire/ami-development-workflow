@@ -149,17 +149,17 @@
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
         <q><strong style="color:green">What</strong> is being demo'd?</q>
         <br>
-        <span class="footnote">The AMI development workflow and the process of creating “Immutable Servers".</span>
+        <span class="footnote">The AMI development workflow and the creation of “Immutable Servers".</span>
     </div>
 
 
     <div class="step slide" data-x="0" data-y="-1500">
         <q><strong style="color:green">Why</strong> is this topic relevant?</q>
         <br>
-        <span class="footnote">I'll be describing some of the methods employed when creating "Immutable Servers”.</span>
+        <span class="footnote">I'll be describing some of the methods employed when developing AMI's.</span>
         <br>
         <br>
-        <span class="footnote"> This methodology can be adhered to by teams who wish to produce machine images (AMI’s) for any application, using a consistent, standardised means.</span>
+        <span class="footnote">This methodology can be adhered to by teams who wish to produce machine images (AMI’s) for any application, using a consistent, standardised means.</span>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
@@ -199,6 +199,7 @@
         <span class="footnote">Upon success regardless of your builder type, an AMI/Docker Image is produced.</span>
         </br>
         <span class="footnote">Upon commit a CI pipeline is typically triggered and an AMI is produced and available for use on AWS.</span>
+        <img src="images/layering.png" alt="Layering" style="width:604px;height:228px;">
     </div>
 
 
@@ -229,7 +230,7 @@
         <q><strong style="color:green">How?</strong> AMI Layering.</q>
         </br>
         <span class="footnote">A newly created AMI can be used as the basis for building another AMI.</span>
-        <img src="images/layering.png" alt="Layering" style="width:604px;height:228px;">
+        <div align="center"><img src="images/ami_tree.png" alt="Layering" style="align:centr;width:500px;height:400px;"></div>
     </div>
 
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="5">
