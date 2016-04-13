@@ -181,49 +181,39 @@
 
 
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <q><strong style="color:green">Who</strong> is the target audience?</q>
+        <h2><strong style="color:green">Who</strong> is the target audience?</h2>
         <p>Anyone who wants to produce version controlled AMI’s!<br/>
         E.g. DevOps/Developers/Architects/Platforms Teams etc.</p>
     </div>
 
     <div id="livedemo" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
-        <q><strong style="color:green">How?</strong>"Live Demo!"</q>
+        <h2><strong style="color:green">How?</strong>"Live Demo!"</h2>
         <div><script type="text/javascript" src="https://asciinema.org/a/59hb77rwoc6gtn8xjfsnfs1cn.js" id="asciicast-59hb77rwoc6gtn8xjfsnfs1cn" async data-autoplay="true" data-size="small"></script></div>
     </div>
     <!-- Plan B! https://asciinema.org/a/bhj9ouks303z6qyozypvumjs9.js -->
-    
 
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <q><strong style="color:green">How?</strong> AMI Creation.</q>
+        <h2><strong style="color:green">How?</strong> Creating an AMI.</h2>
         </br>
-        <span class="footnote">Upon success regardless of your builder type, an AMI/Docker Image is produced.</span>
+        <span class="footnote">Upon "Packer Build" success regardless of the workflow task in use, a new AMI/Docker Image is produced.</span>
         </br>
-        <span class="footnote">Upon commit a CI pipeline is typically triggered and an AMI is produced and available for use on AWS.</span>
-        <img src="images/layering.png" alt="Layering" style="width:604px;height:228px;">
+        <span class="footnote">Once you are satisfied and commit your change, a CI pipeline typically triggers a "Packer AMI Build" task and a new AMI is created on AWS.</span>
     </div>
 
-
-    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="2">
-        <q><strong style="color:green">How?</strong>AMI Creation</q>
-        <span class="footnote">Upon success regardless of your builder type, an AMI/Docker Image is produced.</span>
-        <span class="footnote">In our case it will build a docker image which we don’t really care about so we can terminate that process.</span>
-        <span class="footnote">Upon commit a CI pipeline is typically triggered and an AMI is produced and available for use on AWS.</span>
-    </div>-->
-
     <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="2">
-        <q><strong style="color:green">How?</strong> Using your AMI's.</q>
+        <h2><strong style="color:green">How?</strong> Using your new AMI.</h2>
         </br>
-        <span class="footnote">An AMI can be used in many ways. e.g. Currently we are using Terraform to manage our AWS GoCD farms.</span>
+        <span class="footnote">An AMI can be used in many ways. e.g. Currently we are using <a href="https://www.terraform.io/">Terraform</a> to manage our AWS GoCD farms.</span>
         </br>
-        <span class="footnote">When building a farm, reference is made to an AMI ID and this image is used as an "Immutable Server" within a given farm.</span>
+        <span class="footnote">When building/recreating a farm, reference is made to the new AMI ID. This image is deployed as an "Immutable Server" within a given farm.</span>
     </div>
 
     <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="2">
-        <q><strong style="color:green">How?</strong> SSH Access?</q>
+        <h2><strong style="color:green">How?</strong> Your new AMI & SSH Access?</h2>
         </br>
-        <span class="footnote">In the case of our "Staging GoCD farms”, we provide users SSH access if they need to do some hands on experimentation with their AMI.</span>
+        <span class="footnote">In the case of our "GoCD farms”, we provide users <strong>staging</strong> SSH access if they need to do some hands on experimentation with their AMI.</span>
         </br>
-        <span class="footnote">As we are employing the immutable pattern, SSH access is NOT provided in the case of production.</span>
+        <span class="footnote">As we are employing the immutable pattern, SSH access is <strong>NOT</strong> provided in the case of <strong>production</strong>.</span>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
@@ -233,8 +223,16 @@
         <div align="center"><img src="images/ami_tree.png" alt="Layering" style="align:centr;width:500px;height:400px;"></div>
     </div>
 
+   <div id="one-more-thing-2" class="step" data-x="8000" data-y="4000" data-scale="1">
+       <q><strong style="color:green">Pain Points</strong></q>
+        </br>
+        <span class="footnote">With reference to Immutable Infrastructure and configuration changes, the turn around can be slower.</span>
+        </br>
+        <span class="footnote">With reference to the current workflow in use: We are using vault as a poor mans Docker registry. Nuff said!</span>
+    </div>
+
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="5">
-        <q><strong style="color:green">Q & A</strong></q>
+        <h1><strong style="color:green">Q & A</strong></h1>
     </div>
 
 </div>
