@@ -147,63 +147,93 @@
 <div id="impress">
 
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>{{ .Content }}</q>
+        <q><strong style="color:green">What</strong> is being demo'd?</q>
+        <br>
+        <span class="footnote">The AMI development workflow and the process of creating “Immutable Servers".</span>
     </div>
 
 
     <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+        <q><strong style="color:green">Why</strong> is this topic relevant?</q>
+        <br>
+        <span class="footnote">I'll be describing some of the methods employed when creating "Immutable Servers”.</span>
+        <br>
+        <br>
+        <span class="footnote"> This methodology can be adhered to by teams who wish to produce machine images (AMI’s) for any application, using a consistent, standardised means.</span>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q><strong style="color:green">Why</strong> Immutable you ask?</q>
+        <br>
+        <ul>
+            <li>Version Controlled Changes</li>
+            <li>Consistency</li>
+            <li>Scalability</li>
+            <li>No surprises!</li>
+            <li>Snowflake servers are a thing of the past</li>
+        </ul>
     </div>
 
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="1">
+        <h2 style="color:green">Immutable Servers</h2>
+        <span class="footnote">“By frequently destroying and rebuilding servers from the base image, 100% of the server's elements are reset to a known state, without spending a ridiculous amount of time specifying and maintaining detailed configuration specifications.” <strong>- Martin Fowler - ThoughtWorks</strong></span>
     </div>
 
 
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+        <q><strong style="color:green">Who</strong> is the target audience?</q>
+        <p>Anyone who wants to produce version controlled AMI’s!<br/>
+        E.g. DevOps/Developers/Architects/Platforms Teams etc.</p>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="livedemo" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+        <q><strong style="color:green">How?</strong>"Live Demo!"</q>
+        <div><script type="text/javascript" src="https://asciinema.org/a/59hb77rwoc6gtn8xjfsnfs1cn.js" id="asciicast-59hb77rwoc6gtn8xjfsnfs1cn" async data-autoplay="true" data-size="small"></script></div>
     </div>
+    <!-- Plan B! https://asciinema.org/a/bhj9ouks303z6qyozypvumjs9.js -->
+    
 
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+        <q><strong style="color:green">How?</strong> AMI Creation.</q>
+        </br>
+        <span class="footnote">Upon success regardless of your builder type, an AMI/Docker Image is produced.</span>
+        </br>
+        <span class="footnote">Upon commit a CI pipeline is typically triggered and an AMI is produced and available for use on AWS.</span>
     </div>
 
 
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="2">
+        <q><strong style="color:green">How?</strong>AMI Creation</q>
+        <span class="footnote">Upon success regardless of your builder type, an AMI/Docker Image is produced.</span>
+        <span class="footnote">In our case it will build a docker image which we don’t really care about so we can terminate that process.</span>
+        <span class="footnote">Upon commit a CI pipeline is typically triggered and an AMI is produced and available for use on AWS.</span>
+    </div>-->
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="2">
+        <q><strong style="color:green">How?</strong> Using your AMI's.</q>
+        </br>
+        <span class="footnote">An AMI can be used in many ways. e.g. Currently we are using Terraform to manage our AWS GoCD farms.</span>
+        </br>
+        <span class="footnote">When building a farm, reference is made to an AMI ID and this image is used as an "Immutable Server" within a given farm.</span>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="2">
+        <q><strong style="color:green">How?</strong> SSH Access?</q>
+        </br>
+        <span class="footnote">In the case of our "Staging GoCD farms”, we provide users SSH access if they need to do some hands on experimentation with their AMI.</span>
+        </br>
+        <span class="footnote">As we are employing the immutable pattern, SSH access is NOT provided in the case of production.</span>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+        <q><strong style="color:green">How?</strong> AMI Layering.</q>
+        </br>
+        <span class="footnote">A newly created AMI can be used as the basis for building another AMI.</span>
+        <img src="images/layering.png" alt="Layering" style="width:604px;height:228px;">
     </div>
 
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="5">
+        <q><strong style="color:green">Q & A</strong></q>
     </div>
 
 </div>
